@@ -21,6 +21,9 @@ public class RotateWithMouse : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensitivity;
 
-        playerTransform.Rotate(mouseY,  mouseX, 0f);
+        Debug.Log(mouseY);
+        
+        playerTransform.Rotate(mouseY, mouseX, 0f);
+        
     }
 }

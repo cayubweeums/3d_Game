@@ -35,7 +35,10 @@ public class PlayerMovement : MonoBehaviour
 
         // Move forward / backward
         Vector3 forward = transform.TransformDirection(Vector3.forward);
+        //Vector3 right = transform.TransformDirection(Vector3.right);
         float curSpeed = moveSpeed * Input.GetAxis("Vertical");
+        //Vector3 move = Input.GetAxis("Vertical") * forward + Input.GetAxis("Horizontal") * right;
         controller.Move(forward * curSpeed * Time.deltaTime);
+        //controller.Move(move * Time.deltaTime * moveSpeed);
     }
 }
