@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ad679e60ac8934a95bc9e147d1016f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jellyfish: {fileID: 523283114379672871, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
+    type: 3}
 --- !u!1 &3408106286303615179
 GameObject:
   m_ObjectHideFlags: 0

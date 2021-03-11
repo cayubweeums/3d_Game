@@ -9,6 +9,11 @@ public class HuntPlayer : MonoBehaviour
     public float viewDistance;
     public float moveSpeed;
 
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     // Start is called before the first frame update
     void Start()
     {

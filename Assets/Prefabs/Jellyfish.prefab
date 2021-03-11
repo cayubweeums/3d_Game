@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8591fee2e8ec4aa4495fb95005da710d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 3262999802321328861, guid: 31333d12a2562fa4f8f4065ee72b9f8c, type: 3}
   viewDistance: 70
   moveSpeed: 7
 --- !u!136 &523283114379672889
