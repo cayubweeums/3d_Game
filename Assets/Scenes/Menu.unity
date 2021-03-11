@@ -708,7 +708,10 @@ MonoBehaviour:
   m_text: 'Game designed by Caleb Williams, Eric Pinter, and Sammy Gaskins.
 
     3d
-    models designed by Cierra Elizabeth Hoover, ricksticky, and Addi_Artwork.'
+    models and sprites designed by Cierra Elizabeth Hoover, ricksticky, and Addi_Artwork.
+
+    Oxygen
+    font designed by Vernon Adams.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7baab3793dbd56f43976a0c861ce93c3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
