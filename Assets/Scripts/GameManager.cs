@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadYourAsyncScene("SampleScene"));
     }
 
+    public void GameOver()
+    {
+        Debug.Log("Game Over");
+    }
+
     IEnumerator LoadYourAsyncScene(string scene)
     {
         Debug.Log("Loading " + scene);
