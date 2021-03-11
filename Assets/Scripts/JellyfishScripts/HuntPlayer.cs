@@ -6,8 +6,10 @@ public class HuntPlayer : MonoBehaviour
 {
     public GameObject player;
     private Rigidbody rigidbody;
+    private AudioSource source;
     public float viewDistance;
     public float moveSpeed;
+    public float soundDistance;
 
     private void Awake()
     {
@@ -18,6 +20,7 @@ public class HuntPlayer : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,16 @@ public class HuntPlayer : MonoBehaviour
         if (playerInSight)
         {
             rigidbody.velocity = moveSpeed * (player.transform.position - this.transform.position).normalized;
+            if (Physics.Raycast(this.transform.position, player.transform.position - this.transform.position, soundDistance))
+            {
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
+            } else
+            {
+                source.Stop();
+            }
         }
     }
     void OnDrawGizmos()
