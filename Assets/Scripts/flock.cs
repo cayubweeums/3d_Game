@@ -9,9 +9,9 @@ public class flock : MonoBehaviour
     public float speedMultiplier;
     private float speed;
     private float rotationSpeed = 2f;
-    private float neighborDistance = 1f;
-
-    private bool turning = false;
+    private float neighborDistance = 3f;
+    
+    private Vector3 target;
 
     // Start is called before the first frame update
     void Start()
@@ -22,22 +22,23 @@ public class flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        turning = (Vector3.Distance(transform.position, Vector3.zero) >= globalFlock.tankSize);
+        target = globalFlock.goalPos;
+
+        bool turning = (Vector3.Distance(transform.position, target) >= globalFlock.tankSize);
 
         if (turning)
         {
             Debug.Log("turning");
 
-            Vector3 direction = Vector3.zero - transform.position;
-            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(-direction),rotationSpeed * Time.deltaTime);
+            Vector3 direction = target - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(direction),rotationSpeed * Time.deltaTime);
             speed = Random.Range(speedMultiplier, 2 * speedMultiplier);
         } else if (Random.Range(0, 5) < 1)
         {
             ApplyRules();
         }
 
-        transform.Translate(0,0,-Time.deltaTime*speed);
+        transform.Translate(0,0,Time.deltaTime*speed);
 
     }
 
@@ -81,9 +82,9 @@ public class flock : MonoBehaviour
             speed = gSpeed / groupSize;
 
             Vector3 direction = (vcenter + vavoid) - transform.position;
-            if (direction != Vector3.zero)
+            if (direction != target)
                 this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation,
-                    Quaternion.LookRotation(-direction),
+                    Quaternion.LookRotation(direction),
                     rotationSpeed * Time.deltaTime
                 );
 

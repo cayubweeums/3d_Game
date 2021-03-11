@@ -45,10 +45,12 @@ public class HuntPlayer : MonoBehaviour
     }
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, rigidbody.velocity);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, viewDistance);
+        if (rigidbody != null) { 
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, rigidbody.velocity);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, viewDistance);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
