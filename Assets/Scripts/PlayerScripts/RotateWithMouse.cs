@@ -22,7 +22,6 @@ public class RotateWithMouse : MonoBehaviour
         pitch -= mouseSensitivity * Input.GetAxis("Mouse Y") * Time.deltaTime;
         //lock vertical movement to 70 degrees
         pitch = Mathf.Clamp(pitch,-70, 70);
-        Debug.Log(pitch);
 
         this.transform.eulerAngles = new Vector3(pitch, yaw) ;
         
