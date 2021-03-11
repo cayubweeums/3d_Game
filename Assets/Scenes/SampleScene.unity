@@ -495,6 +495,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jellyfish
       objectReference: {fileID: 0}
+    - target: {fileID: 523283114379672888, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1109719013}
+    - target: {fileID: 523283114379672888, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 867157972168419229, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
         type: 3}
       propertyPath: m_RootOrder
@@ -503,17 +513,17 @@ PrefabInstance:
     - target: {fileID: 867157972168419229, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9335356
+      value: -20.91
       objectReference: {fileID: 0}
     - target: {fileID: 867157972168419229, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.947355
+      value: 8.52
       objectReference: {fileID: 0}
     - target: {fileID: 867157972168419229, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.578796
+      value: 9.62
       objectReference: {fileID: 0}
     - target: {fileID: 867157972168419229, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
         type: 3}
@@ -549,6 +559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522803258898386146, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f5a9f6435c47fd47ba054a4ef0dbc4e, type: 3}
