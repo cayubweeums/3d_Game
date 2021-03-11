@@ -16,12 +16,11 @@ public class PickUp : MonoBehaviour
         
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hit something");
-        if (hit.collider.name == "PearlPickUp")
+        if (other.name == "Player")
         {
-            Destroy(hit.collider.gameObject);
+            Destroy(gameObject);
         }
     }
 }

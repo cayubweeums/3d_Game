@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private int upDownRotation = 0;
 
     private CharacterController controller;
+    
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Rotation
         transform.Rotate(upDownRotation * rotationSpeed, Input.GetAxis("Horizontal") * rotationSpeed, 0);
-
+        
         // Move forward / backward
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         //Vector3 right = transform.TransformDirection(Vector3.right);

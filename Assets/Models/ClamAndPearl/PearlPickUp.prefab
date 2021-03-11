@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085075599315146797}
   - component: {fileID: 879914503332132186}
+  - component: {fileID: 7608917556924564942}
   m_Layer: 0
   m_Name: PearlPickUp
   m_TagString: Untagged
@@ -46,6 +47,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.18545836
   m_Center: {x: -0.037641317, y: 0.16137499, z: 0}
+--- !u!114 &7608917556924564942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307694131393577623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ad679e60ac8934a95bc9e147d1016f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3408106286303615179
 GameObject:
   m_ObjectHideFlags: 0
