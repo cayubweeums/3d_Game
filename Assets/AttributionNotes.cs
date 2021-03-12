@@ -10,5 +10,6 @@ Menu background by Ciera Elizabeth Hoover [SugarMoonWitch]:
 - image source: https://opengameart.org/content/underwater-bg
 Oxygen font designed by Vernon Adams, found at:
 https://fonts.google.com/specimen/Oxygen?preview.text_type=custom
-
+Beeping sound effect designed by Pete Barry, found at:
+https://freesound.org/people/PeteBarry/sounds/494135/
  */
