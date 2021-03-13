@@ -18,4 +18,6 @@ Staghorn coral model by RISD Nature Lab, found at:
 https://sketchfab.com/3d-models/staghorn-coral-8c14ba2dddcb48cb9650e84fb60260e5
 Kelp model designed by Taylor M Gandy, found at:
 https://sketchfab.com/3d-models/kelp-83202894d3f64a129d7fdeefc044aed8
+Submarine model designed by T-Flex CAD ST (free), found at:
+https://sketchfab.com/3d-models/submarine-bd23a5a794814e99b192b3e43775f140
  */

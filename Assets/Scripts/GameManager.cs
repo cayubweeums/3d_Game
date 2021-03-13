@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         instructionTextBox.SetActive(false);
         backButton.SetActive(false);
         ActivateMenuButtons();
-        titleTextBox.GetComponent<TextMeshProUGUI>().SetText("Game Title");
+        titleTextBox.GetComponent<TextMeshProUGUI>().SetText("Pearl Diver");
         titleTextBox.SetActive(true);
     }
 
