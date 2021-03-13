@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
     public GameObject backgroundImage;
     public GameObject blackBackground;
 
+    public int totalPearls;
+    private int pearlsLeft;
+    public GameObject pearlCountDisplay;
+    private TextMeshProUGUI pearlCountDisplayText;
+
     private void Awake()
     {
         if (Instance == null)
@@ -44,7 +49,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pearlCountDisplayText = pearlCountDisplay.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -61,6 +66,9 @@ public class GameManager : MonoBehaviour
         // Fade image out
         StartCoroutine(FadeBackgroundImage(new Color(1, 1, 1, 0), 2));
         backgroundImage.SetActive(false);
+        pearlsLeft = totalPearls;
+        pearlCountDisplay.SetActive(true);
+        pearlCountDisplayText.SetText("Pearls left: " + pearlsLeft);
     }
 
     public void CreditsButton()
@@ -103,6 +111,7 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
+        pearlCountDisplay.SetActive(false);
         blackBackground.SetActive(true);
         StartCoroutine(LoadYourAsyncScene("Menu"));
         backButton.SetActive(true);
@@ -154,5 +163,11 @@ public class GameManager : MonoBehaviour
         creditsButton.SetActive(false);
         instructionButton.SetActive(false);
         backButton.SetActive(false);
+    }
+
+    public void CollectPearl()
+    {
+        pearlsLeft -= 1;
+        pearlCountDisplayText.SetText("Pearls left: " + pearlsLeft);
     }
 }

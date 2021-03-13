@@ -27,7 +27,8 @@ public class PickUp : MonoBehaviour
             GameObject jellyfishInstance1 = Instantiate(jellyfish);
             Vector3 newPosition = transform.position + (Vector3.up * Random.Range(-10f, 10f)) + (Vector3.right * 60);
             jellyfishInstance1.transform.position = newPosition;
-            
+            GameManager.Instance.CollectPearl();
+
             // Activate the sub if all pearls are collected
             if (allPearls.transform.childCount == 1)
             {
