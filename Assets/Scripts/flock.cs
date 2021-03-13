@@ -9,27 +9,38 @@ public class flock : MonoBehaviour
     public float speedMultiplier;
     private float speed;
     private float rotationSpeed = 2f;
-    private float neighborDistance = 3f;
-    
+    private float neighborDistance = 100f;
+    public float avoidFactor = 100f;
+    private int spentFrames;
+    private int framesTilBored = 400;
     private Vector3 target;
+    private globalFlock globalHook;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = Random.Range(speedMultiplier, 2 * speedMultiplier);
+        spentFrames = Random.Range(0, framesTilBored);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void setGlobalHook(globalFlock g)
     {
-        target = globalFlock.goalPos;
+        globalHook = g;
+    }
 
-        bool turning = (Vector3.Distance(transform.position, target) >= globalFlock.tankSize);
+    
+    void FixedUpdate()
+    {
+        if (spentFrames++ > framesTilBored)
+        {
+            spentFrames = 0;
+            target = globalHook.getGoal();
+        }
+
+        bool turning = (Vector3.Distance(transform.position, target) >= globalFlock.tankSize.magnitude);
 
         if (turning)
         {
-            Debug.Log("turning");
-
             Vector3 direction = target - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(direction),rotationSpeed * Time.deltaTime);
             speed = Random.Range(speedMultiplier, 2 * speedMultiplier);
@@ -50,8 +61,6 @@ public class flock : MonoBehaviour
         Vector3 vavoid = Vector3.zero;
         float gSpeed = .1f;
 
-        Vector3 goalPos = globalFlock.goalPos;
-        
         int groupSize = 0;
 
         foreach (GameObject go in gos)
@@ -66,7 +75,7 @@ public class flock : MonoBehaviour
 
                     if (dist < 1f)
                     {
-                        vavoid = vavoid + (this.transform.position - go.transform.position);
+                        vavoid = vavoid + avoidFactor * (this.transform.position - go.transform.position);
                     }
 
                     flock otherFlock = go.GetComponent<flock>();
@@ -78,7 +87,7 @@ public class flock : MonoBehaviour
 
         if (groupSize > 0)
         {
-            vcenter = vcenter / groupSize + (goalPos - this.transform.position);
+            vcenter = vcenter / groupSize + (target - this.transform.position);
             speed = gSpeed / groupSize;
 
             Vector3 direction = (vcenter + vavoid) - transform.position;
