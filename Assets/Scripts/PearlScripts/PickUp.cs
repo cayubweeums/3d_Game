@@ -25,7 +25,7 @@ public class PickUp : MonoBehaviour
         if (other.name == "Player")
         {
             GameObject jellyfishInstance1 = Instantiate(jellyfish);
-            Vector3 newPosition = transform.position + (Vector3.up * Random.Range(-10f, 10f)) + (Vector3.right * 60);
+            Vector3 newPosition = transform.position + (Vector3.forward * Random.Range(-40f, 40f)) + (Vector3.right * Random.Range(-40f, 40f)) + Vector3.up * 5;
             jellyfishInstance1.transform.position = newPosition;
             GameManager.Instance.CollectPearl();
 
