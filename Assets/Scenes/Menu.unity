@@ -1361,7 +1361,7 @@ MonoBehaviour:
   creditsTextBox: {fileID: 345778131}
   backgroundImage: {fileID: 2066411959}
   blackBackground: {fileID: 749144441}
-  totalPearls: 2
+  totalPearls: 10
   pearlCountDisplay: {fileID: 831748156}
 --- !u!4 &966627451
 Transform:
