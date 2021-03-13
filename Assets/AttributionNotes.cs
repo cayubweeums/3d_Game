@@ -24,4 +24,7 @@ Sand texture by Keith333, found at:
 https://opengameart.org/content/sand-texture-sand-seamless-texture-with-normalmap
 Skybox designed by Avionx, found at:
 https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
+Background music by Mr_Spectrum, found at:
+https://assetstore.unity.com/packages/audio/ambient/underwater-ambient-66498
+
  */
