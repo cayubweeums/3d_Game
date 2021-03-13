@@ -20,4 +20,6 @@ Kelp model designed by Taylor M Gandy, found at:
 https://sketchfab.com/3d-models/kelp-83202894d3f64a129d7fdeefc044aed8
 Submarine model designed by T-Flex CAD ST (free), found at:
 https://sketchfab.com/3d-models/submarine-bd23a5a794814e99b192b3e43775f140
+Skybox designed by Avionx, found at:
+https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
  */
