@@ -5,6 +5,8 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     public GameObject jellyfish;
+    public GameObject allPearls;
+    public GameObject submarine;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,12 @@ public class PickUp : MonoBehaviour
             GameObject jellyfishInstance1 = Instantiate(jellyfish);
             Vector3 newPosition = transform.position + (Vector3.up * Random.Range(-10f, 10f)) + (Vector3.right * 60);
             jellyfishInstance1.transform.position = newPosition;
+            
+            // Activate the sub if all pearls are collected
+            if (allPearls.transform.childCount == 0)
+            {
+                submarine.SetActive(true);
+            }
             Destroy(gameObject);
         }
     }
