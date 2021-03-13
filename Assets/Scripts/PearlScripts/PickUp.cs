@@ -29,7 +29,7 @@ public class PickUp : MonoBehaviour
             jellyfishInstance1.transform.position = newPosition;
             
             // Activate the sub if all pearls are collected
-            if (allPearls.transform.childCount == 0)
+            if (allPearls.transform.childCount == 1)
             {
                 submarine.SetActive(true);
             }

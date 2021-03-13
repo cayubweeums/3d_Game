@@ -549,7 +549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000061989, y: 118}
+  m_AnchoredPosition: {x: 10, y: 156}
   m_SizeDelta: {x: 346.7989, y: 60.01303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &303187590
@@ -683,8 +683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5, y: -66.8}
-  m_SizeDelta: {x: 541.97485, y: 183.67538}
+  m_AnchoredPosition: {x: 0, y: -28.684}
+  m_SizeDelta: {x: 541.97485, y: 246.63116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345778133
 MonoBehaviour:
@@ -708,7 +708,8 @@ MonoBehaviour:
   m_text: 'Game designed by Caleb Williams, Eric Pinter, and Sammy Gaskins.
 
     3d
-    models and sprites designed by Cierra Elizabeth Hoover, ricksticky, and Addi_Artwork.
+    models and sprites designed by Cierra Elizabeth Hoover, ricksticky, Addi_Artwork,
+    Sandra_s, RISD Nature Lab, T-Flex CAD ST (free), and Taylor M Gandy.
 
     Oxygen
     font designed by Vernon Adams.
@@ -716,7 +717,8 @@ MonoBehaviour:
     Sounds designed by Pete Barry.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7baab3793dbd56f43976a0c861ce93c3, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -1300838981129690607, guid: 7baab3793dbd56f43976a0c861ce93c3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -779,7 +781,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &345778134
@@ -1406,8 +1408,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5, y: -66.8}
-  m_SizeDelta: {x: 541.97485, y: 183.67538}
+  m_AnchoredPosition: {x: 0, y: -28.684}
+  m_SizeDelta: {x: 541.97485, y: 246.6312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108819011
 MonoBehaviour:
@@ -1428,11 +1430,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use arrow or wasd keys to move player, move camera with mouse. Avoid jellyfish
-    while collecting pearls.
+  m_text: Use arrow or wasd keys to move player, move camera with mouse. Try to collect
+    all the pearls while avoiding jellyfish. Once you find all the pearls, go to
+    a submarine to win the game.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7baab3793dbd56f43976a0c861ce93c3, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -1300838981129690607, guid: 7baab3793dbd56f43976a0c861ce93c3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1495,7 +1499,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1108819012
